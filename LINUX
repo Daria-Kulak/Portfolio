@@ -1,1 +1,186 @@
+daria_kulak@DESKTOP-JUI174U:~$ pwd
+/home/daria_kulak
+daria_kulak@DESKTOP-JUI174U:~$ mkdir Test_1
+daria_kulak@DESKTOP-JUI174U:~$ ls
+ Test_1     
+daria_kulak@DESKTOP-JUI174U:~$ cd ~/Test_1
+daria_kulak@DESKTOP-JUI174U:~/Test_1$ touch 1.txt 2.txt 3.txt
+daria_kulak@DESKTOP-JUI174U:~/Test_1$ ls
+1.txt  2.txt  3.txt
+daria_kulak@DESKTOP-JUI174U:~/Test_1$ cd /home/daria_kulak
+daria_kulak@DESKTOP-JUI174U:~$ mkdir Test_2
+daria_kulak@DESKTOP-JUI174U:~$ ls
+ Test_2     Test_1     
+daria_kulak@DESKTOP-JUI174U:~$ rmdir Test_2
+daria_kulak@DESKTOP-JUI174U:~$ ls
+Test_1    
+daria_kulak@DESKTOP-JUI174U:~$ cd ~/Test_1
+daria_kulak@DESKTOP-JUI174U:~/Test_1$ rm 2.txt
+daria_kulak@DESKTOP-JUI174U:~/Test_1$ ls
+1.txt  3.txt
+daria_kulak@DESKTOP-JUI174U:~/Test_1$ cd /home/daria_kulak
+daria_kulak@DESKTOP-JUI174U:~$ mkdir Test_3
+daria_kulak@DESKTOP-JUI174U:~$ ls
+ Test_3     Test_1  
+daria_kulak@DESKTOP-JUI174U:~$ cd ~/Test_3
+daria_kulak@DESKTOP-JUI174U:~/Test_3$ touch File1.txt File2.txt
+daria_kulak@DESKTOP-JUI174U:~/Test_3$ ls
+File1.txt  File2.txt
+daria_kulak@DESKTOP-JUI174U:~/Test_3$ cd /home/daria_kulak
+daria_kulak@DESKTOP-JUI174U:~$ rm -R Test_3
+daria_kulak@DESKTOP-JUI174U:~$ ls
+Test_1     
+daria_kulak@DESKTOP-JUI174U:~$ mkdir Test_4
+daria_kulak@DESKTOP-JUI174U:~$ ls
+ Test_4    Test_1   
+daria_kulak@DESKTOP-JUI174U:~$ cd /home/daria_kulak
+daria_kulak@DESKTOP-JUI174U:~$ cp Test_1/1.txt 3.txt Test_4
+daria_kulak@DESKTOP-JUI174U:~$ ls Test_4
+1.txt  3.txt
+daria_kulak@DESKTOP-JUI174U:~$ nano 1.txt
+daria_kulak@DESKTOP-JUI174U:~$ cat 1.txt
+line1
+line2
+line3
+line4
+daria_kulak@DESKTOP-JUI174U:~$ nano 3.txt
+daria_kulak@DESKTOP-JUI174U:~$ cat 1.txt 3.txt
+line1
+line2
+line3
+line4
+line 1
+line 2
+line 3
+daria_kulak@DESKTOP-JUI174U:~$ nano 1.txt
+daria_kulak@DESKTOP-JUI174U:~$ nano 3.txt
+daria_kulak@DESKTOP-JUI174U:~$ cat 1.txt 3.txt
+1
+2
+3
+4
+1
+2
+3
+daria_kulak@DESKTOP-JUI174U:~$
 
+
+
+
+daria_kulak@DESKTOP-JUI174U:~$ ls
+daria_kulak@DESKTOP-JUI174U:~$ mkdir Test3
+daria_kulak@DESKTOP-JUI174U:~$ ls
+Test3
+daria_kulak@DESKTOP-JUI174U:~$ ~cd/Test3
+-bash: ~cd/Test3: No such file or directory
+daria_kulak@DESKTOP-JUI174U:~$ ls Test3
+daria_kulak@DESKTOP-JUI174U:~$ touch 4.txt 5.txt 6.txt
+daria_kulak@DESKTOP-JUI174U:~$ ls
+4.txt  5.txt  6.txt  Test3
+daria_kulak@DESKTOP-JUI174U:~$ cd/Test3
+-bash: cd/Test3: No such file or directory
+daria_kulak@DESKTOP-JUI174U:~$ cd ~/Test3
+daria_kulak@DESKTOP-JUI174U:~/Test3$ touch 4.txt 5.txt 6.txt
+daria_kulak@DESKTOP-JUI174U:~/Test3$ ls
+4.txt  5.txt  6.txt
+daria_kulak@DESKTOP-JUI174U:~/Test3$ nano 4.txt
+daria_kulak@DESKTOP-JUI174U:~/Test3$ cat 4.txt
+row1
+row2
+row3
+row4
+daria_kulak@DESKTOP-JUI174U:~/Test3$ nano 5.txt
+daria_kulak@DESKTOP-JUI174U:~/Test3$ cat 5.txt
+row1
+row2
+row3
+row4
+daria_kulak@DESKTOP-JUI174U:~/Test3$ nano 6.txt
+daria_kulak@DESKTOP-JUI174U:~/Test3$ cat 6.txt
+row1
+row2
+row3
+row4
+daria_kulak@DESKTOP-JUI174U:~/Test3$ grep row2 5.txt
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+daria_kulak@DESKTOP-JUI174U:~$ pwd
+/home/daria_kulak
+daria_kulak@DESKTOP-JUI174U:~$ ls
+4.txt  5.txt  6.txt  Test3
+daria_kulak@DESKTOP-JUI174U:~$ cd ~/Test3
+daria_kulak@DESKTOP-JUI174U:~/Test3$ pwd
+/home/daria_kulak/Test3
+daria_kulak@DESKTOP-JUI174U:~/Test3$ cd /home/daria_kulak
+daria_kulak@DESKTOP-JUI174U:~$ grep -R row Test3
+Test3/4.txt:row1
+Test3/4.txt:row2
+Test3/4.txt:row3
+Test3/4.txt:row4
+Test3/5.txt:row1
+Test3/5.txt:row2
+Test3/5.txt:row3
+Test3/5.txt:row4
+Test3/6.txt:row1
+Test3/6.txt:row2
+Test3/6.txt:row3
+Test3/6.txt:row4
+daria_kulak@DESKTOP-JUI174U:~$ cd ~/Test3
+daria_kulak@DESKTOP-JUI174U:~/Test3$ grep -ic row 6.txt
+4
+daria_kulak@DESKTOP-JUI174U:~/Test3$ cd /home/daria_kulak
+daria_kulak@DESKTOP-JUI174U:~$ find . -name 5.txt
+./5.txt
+./Test3/5.txt
+daria_kulak@DESKTOP-JUI174U:~$ cd ~/Test3
+daria_kulak@DESKTOP-JUI174U:~/Test3$ find . -name 5.txt -delete -print
+./5.txt
+daria_kulak@DESKTOP-JUI174U:~/Test3$ echo test >> 4.txt
+daria_kulak@DESKTOP-JUI174U:~/Test3$ nano 4.txt
+daria_kulak@DESKTOP-JUI174U:~/Test3$ nano 4.txt
+daria_kulak@DESKTOP-JUI174U:~/Test3$ cat 4.txt
+row1
+row2
+row3
+row4
+fait
+daria_kulak@DESKTOP-JUI174U:~/Test3$ echo test >> 4.txt
+daria_kulak@DESKTOP-JUI174U:~/Test3$ cat 4.txt
+row1
+row2
+row3
+row4
+fait
+test
+daria_kulak@DESKTOP-JUI174U:~/Test3$ ps x
+  PID TTY      STAT   TIME COMMAND
+   49 tty1     S      0:00 -bash
+   72 tty1     R      0:00 ps x
+daria_kulak@DESKTOP-JUI174U:~/Test3$ cd /home/daria_kulak
+daria_kulak@DESKTOP-JUI174U:~$ kill 666
+-bash: kill: (666) - No such process
+daria_kulak@DESKTOP-JUI174U:~$ ping artsiomrusau.com
+PING artsiomrusau.com (185.215.4.92) 56(84) bytes of data.
+--- artsiomrusau.com ping statistics ---
+114 packets transmitted, 0 received, 100% packet loss, time 113125ms
+daria_kulak@DESKTOP-JUI174U:~$ ping -c 5 artsiomrusau.com
+PING artsiomrusau.com (185.215.4.92) 56(84) bytes of data.
+--- artsiomrusau.com ping statistics ---
+5 packets transmitted, 0 received, 100% packet loss, time 4003ms
+
+
+
+daria_kulak@DESKTOP-JUI174U:~$ curl -X POST https://petstore3.swagger.io/api/v3/pet --data "id=666" --data "name=cat"
+{"id":666,"name":"cat"}daria_kulak@DESKTOP-JUI174U:~$ curl -X POST https://petstore3.swagger.io/api/v3/pet --data "id=666" --data "name=cat"           pwd
+/home/daria_kulak
+
+daria_kulak@DESKTOP-JUI174U:~$ curl https://petstore3.swagger.io/api/v3/pet/666
+{"id":666,"name":"cat"}daria_kulak@DESKTOP-JUI174U:~$ 
+daria_kulak@DESKTOP-JUI174U:~$ curl https://petstore3.swagger.io/api/v3/pet/findByStatus?status=sold
+[{"id":6,"name":"Special_char_owner_!@#$^&()`.testing","photoUrls":["https://petstore3.swagger.io/resources/photos/623389095.jpg"],"tags":[],"status":"sold"},{"id":134674,"name":"見響见响仮仏!$%&()*+,-ƄƅƆḞḟṀʶʷʸăĄą","photoUrls":["https://petstore3.swagger.io/resources/photos/623389095.jpg"],"tags":[],"status":"sold"}]daria_kulak@DESKTOP-JUI174U:~$
+daria_kulak@DESKTOP-JUI174U:~$ curl https://petstore3.swagger.io/api/v3/pet/findByStatus?status=available
+[{"id":4,"category":{"id":1,"name":"Dogs"},"name":"Dog 1","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag1"},{"id":2,"name":"tag2"}],"status":"available"},{"id":7,"category":{"id":4,"name":"Lions"},"name":"Lion 1","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag1"},{"id":2,"name":"tag2"}],"status":"available"},{"id":234234,"category":{"id":1,"name":"Dogs"},"name":"asdasd","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":0,"category":{"id":1,"name":"Dogs"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":-1,"category":{"id":1,"name":"Dogs"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":2147483647,"category":{"id":1,"name":"Dogs"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":-2147483648,"category":{"id":1,"name":"Dogs"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":-2,"category":{"id":1,"name":"Dogs"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":374,"category":{"id":1,"name":"CatUpdated"},"name":"Pet374Updated","photoUrls":["www.url_updated.com"],"tags":[{"id":1,"name":"tag1Updated"}],"status":"available"},{"id":376,"category":{"id":1,"name":"Cat"},"name":"Pet376","photoUrls":["www.url.com"],"tags":[{"id":1,"name":"tag1"}],"status":"available"},{"id":375,"category":{"id":1,"name":"CatUpdated"},"name":"Pet375Updated","photoUrls":["www.url_updated.com"],"tags":[{"id":1,"name":"tag1Updated"}],"status":"available"},{"id":377,"category":{"id":1,"name":"Cat"},"name":"Pet377","photoUrls":["www.url.com"],"tags":[{"id":1,"name":"tag1"}],"status":"available"},{"id":100,"name":"Dennis The Dish Fish","photoUrls":["test2"],"status":"available"},{"id":101,"name":"Dennis The Dish Fish","photoUrls":["test2"],"status":"available"},{"id":20,"category":{"id":1,"name":"Dogs"},"name":"Rex","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":10,"category":{"id":1,"name":"Dogs"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":1,"name":"Pet1","photoUrls":["test1","test2"],"tags":[],"status":"available"}]daria_kulak@DESKTOP-JUI174U:~$
+daria_kulak@DESKTOP-JUI174U:~$ curl https://petstore3.swagger.io/api/v3/pet/findByStatus?status=pending
+[{"id":3,"category":{"id":2,"name":"Cats"},"name":"Cat 3","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag3"},{"id":2,"name":"tag4"}],"status":"pending"},{"id":6739257,"category":{"id":10,"name":"string"},"name":"Changed Kitty Price","photoUrls":["string"],"tags":[{"id":10,"name":"string"}],"status":"pending"}]daria_kulak@DESKTOP-JUI174U:~$
+row2
